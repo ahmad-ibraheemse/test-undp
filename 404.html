@@ -5,7 +5,9 @@
     <script>
       // GitHub Pages SPA redirect trick.
       // Encodes the full URL as a query string so index.html can restore it.
-      // segmentCount = 1 because the repo lives at /test-undp (one segment).
+      //
+      // segmentCount = number of path segments in the `base` value in vite.config.js.
+      // e.g. base '/test-undp/' → 1 segment. Update both together if the repo is renamed.
       var segmentCount = 1;
       var l = window.location;
       l.replace(
